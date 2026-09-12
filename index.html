@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TYPEBASH — Defiende tu base escribiendo</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="game-wrap">
+  <div id="scanlines"></div>
+  <div id="stars"></div>
+
+  <div id="hud">
+    <div class="hud-left">
+      <div class="title-mini">TYPEBASH</div>
+      <div class="stat">Oleada <span id="hud-wave">1</span></div>
+    </div>
+    <div class="hud-center">
+      <div class="stat">Puntos <span id="hud-score">0</span></div>
+      <div class="stat">Récord <span id="hud-best">0</span></div>
+      <div class="stat">Multiplicador <span id="hud-combo">x1</span></div>
+    </div>
+    <div class="hud-right">
+      <div id="hp-wrap"><div id="hp-label">BASE</div><div id="hp-bar"><div id="hp-fill"></div></div><span id="hp-text">100</span></div>
+      <button class="btn" id="btn-mute" title="Silencio (F2)">SOUND</button>
+      <button class="btn" id="btn-pause" title="Pausa (ESC)">II</button>
+    </div>
+  </div>
+
+  <div id="field"></div>
+
+  <div id="base">
+    <div class="base-line"></div>
+    <div class="base-label">[ BASE ]</div>
+  </div>
+
+  <div id="prompt">
+    <span id="prompt-label">ESCRIBE:</span>
+    <span id="prompt-word"></span>
+  </div>
+
+  <div id="overlay-menu" class="overlay">
+    <h1>TYPE<span class="neon">BASH</span></h1>
+    <p>Escribe las palabras de los droides para destruirlos antes de que impacten tu base.</p>
+    <p class="hint">Las tildes se pueden omitir · Una tecla errónea rompe tu combo · ¡No dejes que lleguen abajo!</p>
+    <p class="hint">Cada kill suma puntos × multiplicador. Muy de vez en cuando: cámara lenta, limpieza o bonus x3.</p>
+    <button class="btn btn-big" id="btn-start">▶ EMPEZAR</button>
+    <div class="controls">ESC = pausa · F2 = silencio</div>
+  </div>
+
+  <div id="overlay-wave" class="overlay hidden">
+    <h2 id="wave-title"></h2>
+    <div id="wave-sub">¡Prepárate!</div>
+  </div>
+
+  <div id="overlay-over" class="overlay hidden">
+    <h2 class="neon">FIN DE PARTIDA</h2>
+    <div class="stat-line">Puntos <span id="final-score">0</span></div>
+    <div class="stat-line">Récord <span id="final-best">0</span></div>
+    <div class="stat-line">Oleada alcanzada <span id="final-wave">1</span></div>
+    <button class="btn btn-big" id="btn-restart">↺ VOLVER A JUGAR</button>
+  </div>
+</div>
+
+<script src="js/words.js"></script>
+<script src="js/input.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
